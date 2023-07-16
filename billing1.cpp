@@ -54,7 +54,7 @@ void shopping :: menu()
 			cout<<"\t\t\t Password       \n";
 			cin>>password;
 			
-			if(email=="robby@email.com" && password=="robby@123")
+			if(email=="akshaj@email.com" && password=="akshaj@123")
 			{
 				administrator();
 			}
