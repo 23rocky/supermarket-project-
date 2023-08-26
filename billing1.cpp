@@ -187,21 +187,21 @@ void shopping ::add()
 	if(!data)
 	{
 		data.open("database.txt", ios::app|ios::out);
-		data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n";
+		data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n"; // entering the data in the file  
 		data.close();
 	}
 	else
 	{
-		data>>c>>n>>p>>d;
+		data>>c>>n>>p>>d;// initilizing the folling with new pcode,pname,prize and discount which will be inserted.
 		
 		while(!data.eof())
 		{
 			if(c ==pcode)
 			{
-				token++;
+				token++; // if duplicate item is found 
 				
 			}
-			data>>c>>n>>p>>d;
+			data>>c>>n>>p>>d; // this is we are iterating to next element  and reading it 
 		}
 		data.close();
 		
@@ -262,7 +262,7 @@ void shopping ::edit()
 			}
 			else
 			{
-				data1<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n";
+				data1<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n"; // we are iterating to next item 
 				
 			}
 			data>>pcode>>pname>>price>>dis;
