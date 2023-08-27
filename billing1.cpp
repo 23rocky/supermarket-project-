@@ -334,11 +334,11 @@ void shopping:: list()
 	cout<<"\n\n|___________________________________________________________\n";
 	cout<<"ProNo\t\tName\t\tPrice\n";
 	cout<<"\n\n|___________________________________________________________\n";
-	data>>pcode>>pname>>price>>dis;
+	data>>pcode>>pname>>price>>dis;   // reading the elements from the file.
 	while(!data.eof())
 	{
 		cout<<pcode<<"\t\t"<<pname<<"\t\t"<<price<<"\n";
-		data>>pcode>>pname>>price>>dis;
+		data>>pcode>>pname>>price>>dis; // for iteration purpose 
 		
 	}
 	data.close();
