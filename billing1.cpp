@@ -190,7 +190,7 @@ void shopping ::add()
 		data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n"; // entering the data in the file  
 		data.close();
 	}
-	else
+	else // when the file is not empty 
 	{
 		data>>c>>n>>p>>d;// initilizing the folling with new pcode,pname,prize and discount which will be inserted.
 		
@@ -208,7 +208,7 @@ void shopping ::add()
 		
 	
 	
-	if(token==1)
+	if(token==1)  // duplicate found hence using jump statement we go back .
 	 goto m;
 	else{
 		data.open("database.txt", ios::app|ios::out);
@@ -241,7 +241,7 @@ void shopping ::edit()
 	}
 	else{
 		
-		data1.open("database1.txt", ios::app|ios::out);
+		data1.open("database1.txt", ios::app|ios::out); // created a new data1 object and a new database in which we edit the item and then rename it as data . 
 		
 		data>>pcode>>pname>>price>>dis;
 		while(!data.eof())
@@ -310,7 +310,7 @@ void shopping::rem()
 			}
 			else
 			{
-				data1<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n";
+				data1<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n"; // writing all the element in data1 
 				
 			}
 			data>>pcode>>pname>>price>>dis;
